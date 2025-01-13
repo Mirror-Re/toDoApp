@@ -5,10 +5,8 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   let toDoItems = [
     {'id': 1, 'description': 'wash dishes', 'completed': false},
-    {'id': 2, 'description': 'fold laundry', 'completed': false},
-    {'id': 3, 'description': 'do homeworl', 'completed': false},
+    {'id': 2, 'description': 'fold laundry', 'completed': true},
+    {'id': 3, 'description': 'do homework', 'completed': false},
   ];
   res.render('index', {toDoItems});
 });
-
-module.exports = router;
