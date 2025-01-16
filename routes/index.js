@@ -81,7 +81,7 @@ router.get('/edit/:id', async function(req, res){
 router.post('/edit/:id', async function(req, res){
   const {sequelize} = require("../models/index");
   const {QueryTypes} = require("sequelize");
-  await sequelize.query('update todo set description where id = :id', {
+  await sequelize.query('update todo set description = :description where id = :id', {
     type: QueryTypes.UPDATE,
     replacements: {
       id: req.params.id,
